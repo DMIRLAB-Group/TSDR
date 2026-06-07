@@ -4,7 +4,7 @@ Official code for "Temporal Smoothness Doubly Robust Learning for Debiased Knowl
 
 TSDR is a plug-and-play debiasing framework for Knowledge Tracing (KT). It is designed for educational logs that are selectively observed rather than randomly sampled. In real adaptive learning systems, exercise recommendation, student skipping, and self-selection can make the logged interactions Missing Not At Random (MNAR). Training KT models only on these observed logs may therefore mix true mastery with the data collection policy and produce biased knowledge-state estimates.
 
-<img src="images/i.png" alt="Selection bias in knowledge tracing" style="zoom:50%;" />
+<img src="images/i.png" alt="Selection bias in knowledge tracing" style="zoom:30%;" />
 
 ## Core Idea
 
