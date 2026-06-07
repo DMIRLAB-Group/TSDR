@@ -18,7 +18,7 @@ The framework contains three components:
 
 The doubly robust objective combines propensity-based correction with error imputation. It can remain unbiased if either the propensity model or the imputation model is accurate. However, directly applying doubly robust learning to sequential KT can introduce high variance and unstable training. TSDR therefore adds a **temporal smoothness regularizer** to the imputation trajectory, reducing variance accumulation while preserving the doubly robust correction.
 
-## Features
+## Key Features
 
 - Supports multiple KT backbones: `DKT`, `AKT`, `simpleKT`, `FoLiBiKT`, `SparseKT`, and `DisKT`.
 - Provides baseline, IPW-only, imputation-only, and doubly robust training modes.
