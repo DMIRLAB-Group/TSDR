@@ -47,13 +47,6 @@ TSDR/
     folibikt.py
     simplekt.py
     sparsekt.py
-  utils/
-    __init__.py
-    augment_seq.py
-    config.py
-    file_io.py
-    utils.py
-    visualizer.py
 ```
 
 ## Installation
