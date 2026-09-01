@@ -393,9 +393,9 @@ class DRKT(nn.Module):
             else:
                 pred_u = out_dict["ctf_result"]
                 xent_loss = F.binary_cross_entropy(pred[mask], true[mask], weight=self.inv_prop[mask], reduction='mean')
-                imputation_y1 = imputation_out_dict["ctf_result"]
-                with torch.no_grad():
-                    imputation_loss = F.binary_cross_entropy(pred[mask], imputation_y[mask], weight=self.inv_prop[mask], reduction='mean')  #
+                imputation_y1 = imputation_out_dict["ctf_result"].detach()
+                # with torch.no_grad():
+                imputation_loss = F.binary_cross_entropy(pred[mask], imputation_y[mask], weight=self.inv_prop[mask], reduction='mean')  #
                 # imputation_loss = F.mse_loss(pred[mask], imputation_y[mask], reduction='mean')  #
                 direct_loss = F.mse_loss(pred_u[bs, t, :], imputation_y1[bs, t, :], reduction='mean') # 
                 #direct_loss = F.binary_cross_entropy(pred_u[bs, t, :], imputation_y1[bs, t, :], reduction='mean') # 
